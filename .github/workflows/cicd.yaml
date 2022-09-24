@@ -3,7 +3,7 @@ name: Build and Deploy to Cloud Run
 on:
   push:
     branches:
-      - split-front
+      - main
 
 env:
   PROJECT_ID: hack-aso-grupo-11 # TODO: update Google Cloud project id
