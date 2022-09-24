@@ -3,13 +3,13 @@ name: Build and Deploy to Cloud Run
 on:
   push:
     branches:
-      - main
+      - split-front
 
 env:
   PROJECT_ID: hack-aso-grupo-11 # TODO: update Google Cloud project id
   GAR_LOCATION: us-central1 # TODO: update Artifact Registry location
   REPOSITORY: spotmusicrepository # TODO: update Artifact Registry repository name
-  SERVICE: Hack-ASO-GP11-front # TODO: update Cloud Run service name
+  SERVICE: hack-aso-gp11-front # TODO: update Cloud Run service name
   REGION: us-central1 # TODO: update Cloud Run service region
 
 jobs:
