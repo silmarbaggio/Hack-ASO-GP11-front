@@ -49,6 +49,6 @@ jobs:
           region: ${{ env.REGION }}
           image: ${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:${{ github.sha }}
           env_vars: |
-          BACKEND_URL: 127.0.0.1
+            BACKEND_URL: https://hack-aso-gp11-back-usnermk24q-uc.a.run.app
       - name: Show Output
         run: echo ${{ steps.deploy.outputs.url }}
