@@ -9,7 +9,7 @@ env:
   PROJECT_ID: hack-aso-grupo-11 # TODO: update Google Cloud project id
   GAR_LOCATION: us-central1 # TODO: update Artifact Registry location
   REPOSITORY: spotmusicrepository # TODO: update Artifact Registry repository name
-  SERVICE: Hack-ASO-GP11-front # TODO: update Cloud Run service name
+  SERVICE: hack-aso-gp11-front # TODO: update Cloud Run service name
   REGION: us-central1 # TODO: update Cloud Run service region
 
 jobs:
@@ -49,6 +49,6 @@ jobs:
           region: ${{ env.REGION }}
           image: ${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.SERVICE }}:${{ github.sha }}
           env_vars: |
-            BACKEND_URL: https://hack-aso-gp11-back-usnermk24q-uc.a.run.app
+            BACKEND_URL=https://hack-aso-gp11-back-usnermk24q-uc.a.run.app
       - name: Show Output
         run: echo ${{ steps.deploy.outputs.url }}
